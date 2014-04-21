@@ -1,0 +1,7 @@
+extends feed_base
+
+block scripts
+  script.
+    $(document).ready(function() {
+        APP.helpers.ajax.feed.put_filling();
+    });

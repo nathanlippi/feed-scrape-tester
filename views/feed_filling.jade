@@ -1,0 +1,29 @@
+h2 Feed, page #{query_obj.page}
+
+- var page             = parseInt(query_obj.page);
+- var pageMax          = parseInt(query_obj.pageMax);
+
+- if(page > pageMax) {
+-   page = pageMax;
+- }
+
+- var perPage          = parseInt(query_obj.itemsPerPage);
+- var nextPageURL      = url.base + "?" + url.qs.feed.next;
+- var urlWithoutItemId = url.base + "?" + url.qs.item.withoutItemId + "&itemId=";
+
+- for (var i = page*perPage; i < (page+1)*perPage; ++i) {
+    | <a href="!{urlWithoutItemId}#{i}">Item ##{i}</a>
+    br
+- }
+
+br
+
+- var onclickNextPageButton = "";
+- if(query_obj.feedIsStatic === "0") {
+-   nextPageURL = "#";
+-   nextPageOnclick = "APP.helpers.ajax.feed.put_filling(true);";
+- }
+
+| <a class="btn btn-primary" href="!{nextPageURL}" onclick="!{nextPageOnclick}">
+|   Next
+| </a>

@@ -1,0 +1,17 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    link(rel='stylesheet', href='http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css')
+    script(src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js")
+    script(src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js")
+    script(src="/javascripts/main.js")
+  body
+    h1#page_title= title
+    div.row.equal-height
+      .col.col-md-6.col-sm-12
+        block content
+      .col.col-md-6.col-sm-12
+        include json_area
+    block scripts

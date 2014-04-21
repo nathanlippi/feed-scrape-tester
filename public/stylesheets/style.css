@@ -1,0 +1,45 @@
+body {
+  padding: 50px;
+}
+
+#page_title {
+  margin-bottom: 20px;    
+}
+
+#feed_area, #item_area {
+  min-height: 300px;
+  width: 100%;
+
+  border: 1px dotted gray;
+
+  margin: 0 auto;
+  padding: 20px;
+}
+#item_area {
+  border-color: red;
+}
+
+#page_json_data {
+  word-wrap : break-word;
+}
+
+.col {
+  margin-bottom: 20px;
+}
+
+/* Make all rows equal heights */
+.row.equal-height {
+  display: table;
+}
+.equal-height .col {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+
+    /* overflow: hidden; */
+    position: relative;
+}
+
+.hidden {
+  display: none;
+}
